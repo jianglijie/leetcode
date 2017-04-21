@@ -1,0 +1,1 @@
+select Email from Person a where ((SELECT COUNT(*) FROM Person WHERE Email = a.Email) > 1) group by a.Email
