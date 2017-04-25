@@ -1,0 +1,2 @@
+select d.`Name` as Department,e.`Name` as Employee,e.Salary as Salary from employee e,department d 
+where d.Id=e.DepartmentId and Salary=(select max(salary) from employee where DepartmentId=e.DepartmentId)
